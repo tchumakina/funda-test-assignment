@@ -65,7 +65,7 @@ public class RecreationSearch extends QuickSearchBlock {
             WebElement elementToClick = WebDriverHelper.findElement(autocompleteList, By.xpath(path), 5);
             try {
                 resultsCount = elementToClick.findElement(By.xpath("./../../div[@class='autocomplete-count']")).getText();
-            } catch (NoSuchElementException ex) {
+        } catch (NoSuchElementException ex) {
                 System.out.println(String.format("DEBUG: cannot identify number of results for '%s': %s", valueToFind, ex.getMessage()));
             }
             elementToClick.click();
